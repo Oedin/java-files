@@ -14,7 +14,7 @@ public class Main {
 
 		}
 	
-		//
+		//getting user input using array
 		public static int[] getIntArray(int volume) {
 			int[] array =  new int[volume];
 			System.out.println("Enter "+volume +" integers: \r");
