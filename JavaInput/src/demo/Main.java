@@ -1,20 +1,34 @@
 package demo;
 
+	//Input using array
 import java.util.Scanner;
 
 public class Main {
 	 	
-				public static void main(String[]args) {
-	 			
-	 				 	Scanner myScanner = new Scanner(System.in);
-	 				 	// Wait for user to enter a line of text
-	 					System.out.println("Enter an integer:");
-	 				
-	 					//Output the prompt
-	 					int intNum = myScanner.nextInt();
-	 					
-	 					// Tell user what they have entered
-	 					System.out.println("You enterd: " + intNum);
-	 		
-	 			}
-	 }
+	private static Scanner myScanner = new Scanner(System.in);
+
+		public static void main(String[] args) {
+		
+			int[] myInt = getIntArray(3);
+			printArray(myInt);
+
+		}
+	
+		//
+		public static int[] getIntArray(int volume) {
+			int[] array =  new int[volume];
+			System.out.println("Enter "+volume +" integers: \r");
+			for (int i=0; i<array.length; i++){
+				array[i] = myScanner.nextInt();
+			}
+			return array;
+		
+		}
+		
+		//Printing array
+		public static void printArray(int[] array){
+			for (int i=0; i<array.length; i++){
+				System.out.println("Index array "+i+ " contains " + array[i]);
+			}
+		}
+	}
